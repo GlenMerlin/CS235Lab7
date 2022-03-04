@@ -1,12 +1,31 @@
 #include "BST.h"
 
-BST :: BST() {};
-BST :: ~BST() {};
+bool BST :: add(int data){
+        cout << "add"<<endl;
+	    Node *ptr = new Node(data);
+	    ptr->leftChild = NULL; // To test that the friend relationship works
+	    NodeInterface *rval = ptr->getLeftChild();
+	    long value = (long)rval;
+	    cout << "Added "<<value<<endl;
+	    root = ptr;
+        return 0;
+};
 
-BST :: getRootNode() const;
+bool BST :: remove(int data){
+return 0;
+};
 
-bool BST :: add(int data);
+void BST :: clear(){
 
-bool BST :: remove(int data);
+};
 
-void BST :: clear();
+string BSTtoString() {
+return "";
+};
+
+NodeInterface * Node :: getLeftChild()const {
+    return leftChild;
+};
+NodeInterface * Node :: getRightChild()const {
+    return rightChild;
+};
