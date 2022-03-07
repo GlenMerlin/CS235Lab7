@@ -1,4 +1,12 @@
 #include "BST.h"
+#include "Node.h"
+
+BST::BST(){
+	cout << "constructor" << endl;
+}
+BST:: ~BST(){
+	cout << "destructor" << endl;
+}
 
 bool BST :: add(int data){
         cout << "add"<<endl;
@@ -23,9 +31,6 @@ string BSTtoString() {
 return "";
 };
 
-NodeInterface * Node :: getLeftChild()const {
-    return leftChild;
-};
-NodeInterface * Node :: getRightChild()const {
-    return rightChild;
+Node * BST::getRootNode() const{
+return NULL;
 };

@@ -1,5 +1,12 @@
 {
     "files.associations": {
         "*.tcc": "cpp"
-    }
+    },
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/glenmerlin/CS 235/CS235Lab7",
+            "binaryPath": "/home/glenmerlin/CS 235/CS235Lab7/bst",
+            "binaryArgs": []
+        }
+    ]
 }
