@@ -18,4 +18,8 @@ class BST : public BSTInterface {
         void clear();
 
         Node *root;
+
+        bool search(int data);
+
+        int treeSize, searchSteps;
 };

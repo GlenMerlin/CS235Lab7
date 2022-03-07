@@ -5,7 +5,7 @@ Node::Node(int data): data(data) {};
 Node::~Node(){};
 
 int Node::getData() const{
-return 0;
+return data;
 };
 
 NodeInterface * Node::getLeftChild() const{

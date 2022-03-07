@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Mar  6 16:39:46 2022
+# Make data base, printed on Sun Mar  6 18:05:48 2022
 
 # Variables
 
@@ -19,7 +19,7 @@ LC_ALL = C
 # environment
 NO_AT_BRIDGE = 1
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-dea64ef7-61d5-4e64-b3ab-4f2340fbdec0.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e78798cb-5b43-4fed-a96e-1caadebef687.sock
 # environment
 LC_NAME = en_US.UTF-8
 # environment
@@ -61,7 +61,7 @@ VSCODE_CODE_CACHE_PATH = /home/glenmerlin/.config/Code/CachedData/b5205cc8eb4fba
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.ZNZTI1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.0IRJI1
 # default
 .LOADED := 
 # environment
@@ -69,13 +69,13 @@ LESS_TERMCAP_md = [01;32m
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # environment
-GNOME_TERMINAL_SERVICE = :1.744
+GNOME_TERMINAL_SERVICE = :1.103
 # makefile
 MAKEFLAGS = pqrR
 # environment
 LESS_TERMCAP_so = [01;47;34m
 # environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=0fa850685494648976500bd86222bd95
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=45d92d127b8e7dd8d95ac52862255a4c
 # makefile
 CURDIR := /home/glenmerlin/CS 235/CS235Lab7
 # environment
@@ -105,7 +105,7 @@ MAKEFILE_LIST := makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 102046
+VSCODE_PID = 2561
 # environment
 MOZ_ENABLE_WAYLAND = 1
 # environment
@@ -115,7 +115,7 @@ XDG_SESSION_TYPE = wayland
 # makefile (from 'makefile', line 3)
 CCFLAGS = -std=c++11 -g
 # environment
-SESSION_MANAGER = local/Hyperion:@/tmp/.ICE-unix/1606,unix/Hyperion:/tmp/.ICE-unix/1606
+SESSION_MANAGER = local/Hyperion:@/tmp/.ICE-unix/1601,unix/Hyperion:/tmp/.ICE-unix/1601
 # automatic
 *F = $(notdir $*)
 # environment
@@ -125,7 +125,7 @@ CHROME_DESKTOP = code-url-handler.desktop
 # environment
 INSIDE_NAUTILUS_PYTHON = 
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=0fa850685494648976500bd86222bd95
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=45d92d127b8e7dd8d95ac52862255a4c
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # environment
@@ -143,7 +143,7 @@ XMODIFIERS = @im=ibus
 # environment
 SHLVL = 2
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/909be8e8_133a_4f40_b3ad_3fe9ea6565f8
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/cfee281f_2d3f_40c9_8e1f_a0eb1a123551
 # environment
 MAKELEVEL := 0
 # default
@@ -191,7 +191,7 @@ LOGNAME = glenmerlin
 # makefile
 .DEFAULT_GOAL := bst
 # environment
-SYSTEMD_EXEC_PID = 1606
+SYSTEMD_EXEC_PID = 1601
 # environment
 EDITOR = /usr/bin/nano
 # environment
@@ -263,9 +263,9 @@ LC_IDENTIFICATION = en_US.UTF-8
 
 # Directories
 
-# . (device 2068, inode 5989197): 27 files, no impossibilities.
+# . (device 2068, inode 5989197): 34 files, no impossibilities.
 
-# 27 files, no impossibilities in 1 directories.
+# 34 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -283,6 +283,7 @@ Test_Binary_Search_Tree_Numbers: Test_Binary_Search_Tree_Numbers.cpp Binary_Sear
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+ 
 #  recipe to execute (from 'makefile', line 7):
 	$(CC) $(CCFLAGS) -o Test_Binary_Search_Tree_Numbers Test_Binary_Search_Tree_Numbers.cpp
 
@@ -293,7 +294,6 @@ BST.cpp:
 #  File has not been updated.
 
 # Not a target:
- 
 Test_Binary_Search_Tree_Numbers.cpp:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -388,12 +388,12 @@ BTNode.h:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 38 / storage = 464 B / avg = 12 B
-# current buf: size = 8162 B / used = 464 B / count = 38 / avg = 12 B
+# strcache buffers: 1 (0) / strings = 44 / storage = 545 B / avg = 12 B
+# current buf: size = 8162 B / used = 545 B / count = 44 / avg = 12 B
 
-# strcache performance: lookups = 52 / hit rate = 26%
+# strcache performance: lookups = 59 / hit rate = 25%
 # hash-table stats:
-# Load=38/8192=0%, Rehash=0, Collisions=0/52=0%
-# Finished Make data base on Sun Mar  6 16:39:46 2022
+# Load=44/8192=1%, Rehash=0, Collisions=0/59=0%
+# Finished Make data base on Sun Mar  6 18:05:48 2022
 
  
