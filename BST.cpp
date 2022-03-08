@@ -19,17 +19,49 @@ bool BST::add(int data){
 			return true;
 		}
 		else {
-			// search function
-			// does the value already exist?
-				// if yes break
-			// insert left or right?
-			// can't insert?
-			cout << "root is not null, this functionality is currently not working" << endl;
+			if (search(data)){
+				cout << "can't add data because it already exists in the tree" << endl;
+				return false;
+			}
+			else {
+				return updateData(root, data, false);
+			}
 			return false;
 		}
 };
 
+// action tells the function if we're adding or deleting! True=Delete, False=Add
+bool BST::updateData(Node* currentNode, int data, bool action){
+	
+	if (currentNode->data < data && currentNode->leftChild != nullptr){
+		return updateData(currentNode->leftChild, data, action);
+	}
+	else if (currentNode->data > data && currentNode->rightChild != nullptr) {
+		return updateData(currentNode->rightChild, data, action);
+	}
+	if (currentNode->data < data && action == false){
+		Node *valToAdd = new Node(data);
+		currentNode->leftChild = valToAdd;
+		treeSize++;
+		return true;
+	}
+	else if (currentNode->data > data && action == false){
+		Node *valToAdd = new Node(data);
+		currentNode->rightChild = valToAdd;
+		treeSize++;
+		return true;
+	}
+	if (currentNode->data == data){
+		// check if the current node has children
+			// if there are no children delete it
+			// if there are children perform a search to find the proper value to replace it with
+		cout << "Deletion needs work!!!" << endl;
+	}
+	return false;
+}
+
 bool BST::remove(int data){
+	bool success = 0;
 	if (treeSize == 1){
 		root = nullptr;
 		treeSize--;
@@ -37,21 +69,17 @@ bool BST::remove(int data){
 		return true;
 	}
 	else {
-		if (!search(data)){
-			cout << "This value doesn't exist in the tree" << endl;
-		}
-		else {
-			for (int i = 0; 0 < searchSteps; i++){
-				// remove the value
+				success = updateData(root, data, true);
+				if (success){
+					cout << "successfully deleted!" << endl;
+				}
+				else {
+					cout << "failed to delete the value" << endl;
+				}
 				cout << "searching and deleting data " << endl;
-			}
 		}
-		
-		cout << "removing more than one value is currently not supported" << endl;
-		// change this to true later!
-		return false;
-	}
-};
+		return success;
+	};
 
 void BST::clear(){
 	if (root == NULL){
@@ -75,15 +103,19 @@ bool BST::search(int data){
 	if (treeSize == 1 && root->data == data){
 		return true;
 	}
-	for (int i = 0; i < treeSize; i++){
+	// TODO non matching data
+	while (currentNode != NULL){
 		if (currentNode->data == data){
 			return true;
 		}
-		else if (currentNode->data < data && currentNode->rightChild != nullptr){
-			// go right
+		else if (currentNode->data < data && currentNode->leftChild != nullptr){
+			currentNode = currentNode->leftChild;
 		}
-		else if (currentNode->data > data && currentNode->leftChild != nullptr){
-			// go left
+		else if (currentNode->data > data && currentNode->rightChild != nullptr){
+			currentNode = currentNode->rightChild;
+		}
+		else {
+			return false;
 		}
 
 	}
@@ -91,6 +123,7 @@ bool BST::search(int data){
 }
 
 string BSTtoString() {
+	// loop through, pump into string stream, then output
 return "";
 };
 

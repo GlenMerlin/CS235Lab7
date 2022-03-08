@@ -9,9 +9,9 @@ return data;
 };
 
 NodeInterface * Node::getLeftChild() const{
-return NULL;
+return leftChild;
 };
 
 NodeInterface * Node::getRightChild() const{
-return NULL;
+return rightChild;
 };
