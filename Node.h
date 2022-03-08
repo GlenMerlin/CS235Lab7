@@ -5,7 +5,7 @@ class Node : public NodeInterface{
             friend class BST;
             public:
                 Node(int data);
-                virtual ~Node() override;
+                ~Node();
                 int getData() const;
                 NodeInterface * getLeftChild() const;
                 NodeInterface * getRightChild() const;
