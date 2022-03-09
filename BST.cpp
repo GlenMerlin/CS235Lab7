@@ -18,7 +18,7 @@ bool BST::add(int data){
 bool BST::updateData(Node*& currentNode, int data){
 	if (currentNode == NULL){
 		currentNode = new Node(data);
-		cout << "added: " << data << " to the tree!" << endl; 
+		cout << "added: " << data << " to the tree!" << endl;
 		return true;
 	}
 	else {
@@ -48,7 +48,6 @@ bool BST::deleteData(Node*& currentNode, int data){
 		if (currentNode->leftChild != nullptr && currentNode->rightChild != nullptr){
 			// find the highest left value and replace it, then move the right child's pointer
 			Node* largestChild = currentNode->leftChild;
-			Node* temp = currentNode->leftChild;
 			while (largestChild->rightChild != nullptr){
 				largestChild = largestChild->rightChild;
 			}
@@ -65,12 +64,13 @@ bool BST::deleteData(Node*& currentNode, int data){
 		}
 		else if (currentNode->rightChild != nullptr && currentNode->leftChild == nullptr){
 			// replace the current value with the right child
-			Node * temp = currentNode->rightChild;
+			Node* temp = currentNode->rightChild;
 			delete currentNode;
 			currentNode = temp;
 			return true;
 		}
 		else if (currentNode->leftChild == nullptr && currentNode->rightChild == nullptr){
+			delete currentNode;
 			currentNode = NULL;
 			return true;
 		}
@@ -90,10 +90,17 @@ bool BST::deleteData(Node*& currentNode, int data){
 }
 
 void BST::clear(){
-	while (root != NULL){
-		remove(root->data);
-	}
+	clearHelper(root);
 };
+
+void BST::clearHelper(Node*& currentNode){
+	if (currentNode!=NULL){
+		clearHelper(currentNode->leftChild);
+		clearHelper(currentNode->rightChild);
+		delete currentNode;
+		currentNode = nullptr;
+	}
+}
 
 Node * BST::getRootNode() const{
 	return root;

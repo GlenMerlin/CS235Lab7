@@ -18,6 +18,8 @@ class BST : public BSTInterface {
         bool remove(int data);
 
         bool deleteData(Node*& currentNode, int data);
+
+        void clearHelper(Node*& currentNode);
         
         void clear();
     
