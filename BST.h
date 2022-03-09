@@ -13,9 +13,11 @@ class BST : public BSTInterface {
         
         bool add(int data);
 
-        bool updateData(Node*& currentNode, int data, bool action);
+        bool updateData(Node*& currentNode, int data);
         
         bool remove(int data);
+
+        bool deleteData(Node*& currentNode, int data);
         
         void clear();
     

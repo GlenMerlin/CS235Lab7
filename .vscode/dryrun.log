@@ -1,4 +1,4 @@
-make bst --dry-run --keep-going --print-directory
+make bst --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/glenmerlin/CS 235/CS235Lab7'
 g++ -std=c++11 -g -o bst main.cpp BST.cpp Node.cpp
 make: Leaving directory '/home/glenmerlin/CS 235/CS235Lab7'
